@@ -40,4 +40,9 @@ class Board
       taken?(input) ? false : true
     end
   end
+
+  def update(move, player)
+    index = move.to_i - 1
+    @cells[index] = player.token
+  end
 end
